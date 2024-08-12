@@ -1,62 +1,11 @@
-const perguntas = [
-    enunciado: "Pergunta 1",
-    alternativas: [
-"Alternativa 1",
-"Alternativa 2"
-]
-   ];`
-   let atual = 0;
-   let perguntaAtual;
-   function mostraPergunta() {
-    perguntaAtual = perguntas[atual];
-}
-function mostraPergunta() {
-    perguntaAtual = perguntas[atual];
-    caixaPerguntas.textContent = perguntaAtual.enunciado;
-}
-mostraPergunta()
-let atual = 0;
-let perguntaAtual;
+const open_btn = document.querySelector('.open-btn')
+const close_btn = document.querySelector('.close-btn')
+const nav = document.querySelectorAll('.nav')
 
-function mostraPergunta() {
-  perguntaAtual = perguntas[atual];
-  caixaPerguntas.textContent = perguntaAtual.enunciado;
-}
+open_btn.addEventListener('click', () => {
+    nav.forEach(nav_el => nav_el.classList.add('visible'))
+})
 
-mostraPergunta();
-let atual = 0;
-let perguntaAtual;
-
-function mostraPergunta() {
-  perguntaAtual = perguntas[atual];
-  caixaPerguntas.textContent = perguntaAtual.enunciado;
-  mostraAlternativas();
-}
-function mostraAlternativas() {}
-
-mostraPergunta();
-const alternativa
-(const alternativa of perguntaAtual.alternativas)
-function mostraAlternativas() {
-    for (const alternativa of perguntaAtual.alternativas) {
-    }
-  }
-  function mostraAlternativas() {
-    for (const alternativa of perguntaAtual.alternativas) {
-      const botaoAlternativas = document.createElement("button");
-    }
-  }
-  function mostraAlternativas() {
-    for (const alternativa of perguntaAtual.alternativas) {
-      const botaoAlternativas = document.createElement("button");
-      botaoAlternativa.textContent = alternativa;
-    }
-  }
-  function mostraAlternativas() {
-    for (const alternativa of perguntaAtual.alternativas) {
-      const botaoAlternativas = document.createElement("button");
-      botaoAlternativa.textContent = alternativa;
-      caixaAlternativas.appendChild(botaoAlternativas);
-    }
-  }
-        
+close_btn.addEventListener('click', () => {
+    nav.forEach(nav_el => nav_el.classList.remove('visible'))
+})
